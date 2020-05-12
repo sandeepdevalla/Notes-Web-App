@@ -1,0 +1,5 @@
+<app-filter-notes (listToggle)="listToggle($event)"></app-filter-notes>
+<div style="display: flex;">
+    <app-notes-list (getSelectedNote) = "getSelectedNote($event)"  [ngClass]="listOpen ? 'open-list' : 'close-list'"></app-notes-list>
+    <app-notes-view [selectedNote] = "selectedNote"></app-notes-view>
+</div>

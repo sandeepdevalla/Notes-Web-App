@@ -1,0 +1,22 @@
+.close-list
+    animation: closeEffect 0.5s linear
+    animation-fill-mode: forwards
+
+@keyframes closeEffect
+    from
+        width: 25%
+        opacity: 1
+    to
+        width: 0%
+        opacity: 0
+.open-list
+    animation: openEffect 0.5s linear
+    animation-fill-mode: forwards
+
+@keyframes openEffect
+    from
+        width: 0%
+        opacity: 0
+    to
+        width: 25%
+        opacity: 1
