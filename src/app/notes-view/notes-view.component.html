@@ -1,3 +1,4 @@
 <div class="view-panel">
-    <textarea name="notes" id="notes" cols="30" rows="10" (input) ="editSelectedNote($event)" [value] = "selectedNote.description"> {{selectedNote.description}}</textarea>
+    <div *ngIf ="selectedNote.description == undefined"> You can save notes by creating new notes</div>
+    <textarea  *ngIf ="selectedNote.description" name="notes" id="notes" cols="30" rows="10" (input) ="editSelectedNote($event)" [value] = "selectedNote.description"> {{selectedNote.description}}</textarea>
 </div>

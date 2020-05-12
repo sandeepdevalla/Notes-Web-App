@@ -1,4 +1,4 @@
-<div class="list-panel">
+<div class="list-panel" [ngClass]="{'note-bck': !notes.length}">
     <div class="list-item" *ngFor="let item of notes; index as  i" (click) = "selectedNotes(i)" [ngClass]="{'selected-note': i == selected}">
         <p>{{item.title}} {{i}} </p>
         <p><em>{{item.timeStamp | date: 'shortTime'}}</em> &nbsp; {{item.description}}</p>
